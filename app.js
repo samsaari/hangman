@@ -3,11 +3,11 @@ const puzzleEl = document.querySelector('#puzzle');
 const guessesEl = document.querySelector('#guesses');
 
 puzzleEl.textContent = game1.getPuzzle();
-guessesEl.textContent = game1.remainingGuesses;
+guessesEl.textContent = game1.getStatusMessage();
 
 function renderView(puzzle, guesses) {
     puzzleEl.textContent = puzzle;
-    guessesEl.textContent = guesses;
+    guessesEl.textContent = game1.getStatusMessage();
     console.log(game1.status);
 }
 
