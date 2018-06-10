@@ -1,6 +1,6 @@
 const getPuzzle = async (wordcount) => {
-    const url = 'http://puzzle.mead.io/puzzle';
-    const response = await fetch(`${url}?wordCount=${wordcount}`)
+    const url = `http://puzzle.mead.io/puzzle?wordCount=${wordcount}`;
+    const response = await fetch(url);
     
     if (response.status === 200) {
         const data = await response.json();
